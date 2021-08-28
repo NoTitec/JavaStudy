@@ -1,0 +1,37 @@
+package chapter9;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class FlowWin extends JFrame {
+	private static final long serialVersionUID = 1l;
+	private JButton bt1, bt2, bt3, bt4, bt5;
+
+	public FlowWin(String title) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(500, 500);
+		setTitle(title);
+		
+		setLayout(new FlowLayout(FlowLayout.RIGHT,30, 20));
+		bt1 = new JButton("North");
+		bt2 = new JButton("South");
+		bt3 = new JButton("West");
+		bt4 = new JButton("East");
+		bt5 = new JButton("Center");
+
+		add(bt1);
+		add(bt2);
+		add(bt3);
+		add(bt4);
+		add(bt5);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FlowWin win=new FlowWin("Flowlayout window");
+	}
+
+}
